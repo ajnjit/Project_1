@@ -27,6 +27,9 @@ def square(a):
     a = int(a) ** 2
     return int(a) ** 2
 
+def squareRoot(a):
+    a = float(a) ** 0.5
+    return float(a) ** 0.5
 
 
 class Calculator:
@@ -55,3 +58,6 @@ class Calculator:
         self.result= square(a)
         return self.result
 
+    def squareRoot(self, a):
+        self.result= squareRoot(a)
+        return self.result
