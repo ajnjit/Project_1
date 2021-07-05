@@ -32,6 +32,22 @@ class MyTestCase(unittest.TestCase):
 
 
 
+    def test_square(self):
+        test_data = CsvReader('/src/Square.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Results']) ** 2)
+            self.assertEqual(self.calculator.result, int (row['Results']) ** 2)
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

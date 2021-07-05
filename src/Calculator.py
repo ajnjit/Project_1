@@ -20,6 +20,13 @@ def multipication(a, b):
     c = a * b
     return c
 
+
+
+def square(a):
+    a = int(a) ** 2
+    return int(a) ** 2
+
+
 class Calculator:
     result = 0
 
@@ -36,4 +43,10 @@ class Calculator:
 
     def multiply(self, a, b):
         self.result= multipication(a, b)
+        return self.result
+
+
+
+    def square(self, a):
+        self.result= square(a)
         return self.result
