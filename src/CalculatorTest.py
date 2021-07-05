@@ -11,16 +11,19 @@ class MyTestCase(unittest.TestCase):
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator,Calculator)
 
-    def text_add(self):
+    def test_add(self):
         test_data = CsvReader('/src/Addition.csv').data
+        for row in test_data:
+            self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Results']))
+            self.assertEqual(self.calculator.result, int(row['Results']))
 
 
     def test_subtract(self):
         test_data = CsvReader('/src/Subtraction.csv').data
         pprint(test_data)
         for row in test_data:
-            self.assertAlmostEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Results']))
-            self.assertAlmostEqual(self.calculator.result, int(row['Results']))
+            self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Results']))
+            self.assertEqual(self.calculator.result, int(row['Results']))
 
 
 if __name__ == '__main__':
