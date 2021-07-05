@@ -30,11 +30,15 @@ class MyTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Results']))
             self.assertEqual(self.calculator.result, int(row['Results']))
 
-
+    def test_divide(self):
+        test_data = CsvReader('/src/Division1.csv').data
+        pprint(test_data)
+        for row in test_data:
+            self.assertAlmostEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Results']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Results']))
 
     def test_square(self):
         test_data = CsvReader('/src/Square.csv').data
-        pprint(test_data)
         for row in test_data:
             self.assertEqual(self.calculator.square(row['Value 1']), int(row['Results']) ** 2)
             self.assertEqual(self.calculator.result, int (row['Results']) ** 2)

@@ -20,11 +20,13 @@ def multipication(a, b):
     c = a * b
     return c
 
-
+def division(a, b):
+    return float(a) / float(b)
 
 def square(a):
     a = int(a) ** 2
     return int(a) ** 2
+
 
 
 class Calculator:
@@ -45,8 +47,11 @@ class Calculator:
         self.result= multipication(a, b)
         return self.result
 
-
+    def divide(self, a, b):
+        self.result= division(a, b)
+        return self. result
 
     def square(self, a):
         self.result= square(a)
         return self.result
+
