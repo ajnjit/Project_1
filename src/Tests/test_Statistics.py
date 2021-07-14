@@ -20,6 +20,11 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(self.statistics.result, mean)
         print("The mean is :", mean)
 
+    def test_mode_calculator(self):
+        mode = self.statistics.mode(self.testData)
+        self.assertAlmostEqual(self.statistics.mode(self.testData), mode)
+        self.assertAlmostEqual(self.statistics.result, mode)
+        print("The mode is :", mode)
 
 
 if __name__ == '__main__':

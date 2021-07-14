@@ -4,13 +4,11 @@ python:
 install:
   - pip install -r requirements.txt
 
-script:
-  - python -m  unittest discover -s  ./src/Tests
+env:
+  - PYTHONPATH="${PYTHONPATH}:/src/Calculator:/src/CsvReader:/src/Statistics:/src/Tests:/src"
 
 branches:
   only:
     - master
     - Project_2
 
-env:
-  - PYTHONPATH="${PYTHONPATH}:/src/Calculator:/src/CsvReader:/src/Statistics:/src/Tests:/src"

@@ -1,5 +1,6 @@
 import csv
-from Fileutilities.absolutepath import absolutepath
+from src.Fileutilities.absolutepath import absolutepath
+
 
 class CsvReader:
     data = []
