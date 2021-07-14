@@ -23,7 +23,10 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(self.statistics.variance(self.testData), variance)
         self.assertAlmostEqual(self.statistics.result, variance)
 
-
+    def test_standardDeviation_calculator(self):
+        standardDeviation = self.statistics.standardDeviation(self.testData)
+        self.assertAlmostEqual(self.statistics.standardDeviation(self.testData), standardDeviation)
+        self.assertAlmostEqual(self.statistics.result, standardDeviation)
 
 
 if __name__ == '__main__':
