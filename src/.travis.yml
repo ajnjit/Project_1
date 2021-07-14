@@ -11,3 +11,6 @@ branches:
   only:
     - master
     - Project_2
+
+env:
+  - PYTHONPATH="${PYTHONPATH}:/src/Calculator:/src/CsvReader:/src/Statistics:/src/Tests:/src"
