@@ -1,6 +1,6 @@
 from src.Calculator.Calculator import Calculator
 from src.Statistics.Mean import mean
-from src.Statistics.Mode import mode
+from src.Statistics.Variance import variance
 
 class Statistics(Calculator):
     data = []
@@ -12,6 +12,6 @@ class Statistics(Calculator):
         self.result = mean(data)
         return self.result
 
-    def mode(self, data):
-        self.result = mode(data)
+    def variance (self, data):
+        self.result = variance(data)
         return self.result

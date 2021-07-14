@@ -1,7 +1,10 @@
 from src.Calculator.Addition import addition
 from src.Calculator.Division import division
 
-def mean(num):
-    num_values = len(num)
-    total = sum(num)
-    return float(division(total, num_values))
+def mean(data):
+    num_values = len(data)
+    for num in data:
+        total = 0
+        total = addition (total,num)
+    result = division(total, num_values)
+    return result
