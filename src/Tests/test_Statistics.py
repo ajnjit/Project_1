@@ -7,7 +7,7 @@ from src.Statistics.Statistics import Statistics
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         seed(4)
-        self.testData = randint(1, 10, 10)
+        self.testData = randint(1, 9, 10)
         self.statistics = Statistics()
 
     def test_instantiate_calculator(self):
@@ -28,6 +28,10 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(self.statistics.standardDeviation(self.testData), standardDeviation)
         self.assertAlmostEqual(self.statistics.result, standardDeviation)
 
+    def test_zeroDivision_calculator(self):
+        zeroDivision = self.statistics.zeroDivision(self.testData)
+        self.assertAlmostEqual(self.statistics.zeroDivision(self.testData), zeroDivision)
+        self.assertAlmostEqual(self.statistics.result, zeroDivision)
 
 if __name__ == '__main__':
     unittest.main()
